@@ -127,7 +127,7 @@ h3{
 
     .main-card-container{
         width: 300px;
-        height: 550px;
+        height: 600px;
         grid-template-areas: 
         'card-image'
         'card-content';
