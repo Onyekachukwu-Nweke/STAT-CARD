@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+/* Global Styles */
+
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+:root{
+    --main-bg-color: hsl(233, 47%, 7%);
+    --card-bg-color: hsl(244, 38%, 16%);
+    --card-bg-overlay: hsl(277, 64%, 61%);
+    --text-color-head-stat: hsl(0, 0%, 100%);
+    --text-color-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --text-color-stat-head: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    font-size: 15px;
+    background-color: var(--main-bg-color);
+}
+
+h3{
+    font-size: 25px;
+    width: 300px;
+}
+
+.card-container{
+    width: 100%;
+    margin-top: 12.5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.main-card-container{
+    width: 800px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    grid-template-areas: "card-content card-image";
+}
+
+.card-image{
+    background: linear-gradient(hsla(277, 64%, 61%, 0.541), hsla(277, 64%, 61%, 0.541)),url('./images/image-header-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 400px;
+    height: 100%;
+    grid-area: card-image;
+}
+
+.card-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    justify-items: center;
+    column-gap: 20px;
+    grid-area: card-content;
+}
+
+.card-header{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--text-color-head-stat);
+    font-weight: 700;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+}
+
+.card-header span{
+    color: var(--card-bg-overlay);
+}
+
+.card-paragraph p{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    width: 250px;
+    color: var(--text-color-main-paragraph);
+    font-weight: 400;
+}
+
+.card-infograph{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    column-gap: 45px;
+}
+
+.card-infograph span{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.numeric{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color-head-stat);
+    font-weight: 700;
+}
+
+.num-head{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 10px;
+    color: var(--text-color-stat-head);
+}
+
+@media (min-width: 320px) and (max-width: 480px)
+{
+    html{
+        height: 100%;
+    }
+    body{
+        overflow: scroll;
+    }
+
+    .main-card-container{
+        width: 300px;
+        height: 550px;
+        grid-template-areas: 
+        'card-image'
+        'card-content';
+        gap: 10px
+    }
+
+    .card-image{
+        width: 300px;
+        height: 200px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .card-content{
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+    }
+
+    .card-paragraph{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .card-paragraph p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .card-infograph{
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+    }
+
+}
