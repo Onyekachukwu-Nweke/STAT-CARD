@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Onyekachukwu-Nweke/STAT-CARD)
-- Live Site URL: [Replit](https://your-live-site-url.com)
+- Live Site URL: [Replit](https://STAT-CARD.onyekachukwunwe.repl.co)
 
 ## My process
 
